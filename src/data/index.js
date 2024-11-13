@@ -12,7 +12,7 @@ export const teams = [
   "BetBoom Team",
 ];
 
-export const pos = [
+export const position = [
   "Hard-Carry",
   "Mid-Lanner",
   "Off-Lanner",

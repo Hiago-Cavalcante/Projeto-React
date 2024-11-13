@@ -1,0 +1,12 @@
+.teams-cards {
+  text-align: center;
+  padding: 32px;
+}
+
+.teams-cards h3 {
+  font-size: 32px;
+  border-bottom: 4px solid black;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+ 
