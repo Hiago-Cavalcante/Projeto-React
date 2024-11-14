@@ -1,18 +1,18 @@
-import "./form.css";
-import TextArea from "../textArea";
-import DropDown from "../dropdown";
-import { heroes, position, teams } from "../../data";
-import BtnCreateCard from "../BtnCreatCard";
-import { useState } from "react";
+import './form.css';
+import TextArea from '../textArea';
+import DropDown from '../dropdown';
+import { heroes, position, teams } from '../../data';
+import BtnCreateCard from '../BtnCreatCard';
+import { useState } from 'react';
 
-const Form = (props) => {
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [pos, setPos] = useState("");
-  const [hero, setHero] = useState("");
-  const [team, setTeam] = useState("");
+const Form = props => {
+  const [name, setName] = useState('');
+  const [image, setImage] = useState('');
+  const [pos, setPos] = useState('');
+  const [hero, setHero] = useState('');
+  const [team, setTeam] = useState('');
 
-  const loadForm = (e) => {
+  const loadForm = e => {
     e.preventDefault();
     props.setCardPlayer({
       name,
@@ -21,6 +21,11 @@ const Form = (props) => {
       hero,
       team,
     });
+    setName('');
+    setPos('');
+    setImage('');
+    setHero('');
+    setTeam('');
   };
 
   return (
@@ -32,34 +37,34 @@ const Form = (props) => {
           label="Nome do Player"
           placeholder="Digite o nome"
           value={name}
-          handleChange={(value) => setName(value)}
+          handleChange={value => setName(value)}
         />
         <TextArea
           label="Imagem do Player"
           placeholder="Informe o endereço da imagem"
           value={image}
-          handleChange={(value) => setImage(value)}
+          handleChange={value => setImage(value)}
         />
         <DropDown
           required={true}
           label="Posição"
           itens={position}
           value={pos}
-          handleChange={(value) => setPos(value)}
+          handleChange={value => setPos(value)}
         />
         <DropDown
           required={true}
           label="Heroi Favorito"
           itens={heroes}
           value={hero}
-          handleChange={(value) => setHero(value)}
+          handleChange={value => setHero(value)}
         />
         <DropDown
           required={true}
           label="Time"
-          itens={teams}
+          itens={props.teamsNames}
           value={team}
-          handleChange={(value) => setTeam(value)}
+          handleChange={value => setTeam(value)}
         />
         <BtnCreateCard text="Criar card" />
       </form>

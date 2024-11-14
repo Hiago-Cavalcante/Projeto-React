@@ -1,6 +1,8 @@
 .teams-cards {
   text-align: center;
   padding: 32px;
+  border-radius: 10px;
+  margin: 100px
 }
 
 .teams-cards h3 {
@@ -9,4 +11,10 @@
   display: inline-block;
   padding-bottom: 8px;
 }
- 
+
+.teams-cards .player-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
