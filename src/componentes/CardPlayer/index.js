@@ -5,7 +5,10 @@ const CardPlayer = props => {
 
   return (
     <div className="Card-Player">
-      <div className="header-Card">
+      <div
+        className="header-Card"
+        style={{ backgroundColor: props.backgroundColor }}
+      >
         <img src={props.image} alt={alt} />
       </div>
       <div className="info-Card">

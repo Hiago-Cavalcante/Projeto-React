@@ -11,6 +11,7 @@ const Team = props => {
       <div className="player-cards">
         {props.players.map(playerCard => (
           <CardPlayer
+            backgroundColor={props.primeColor}
             key={playerCard.name}
             image={playerCard.image}
             name={playerCard.name}
