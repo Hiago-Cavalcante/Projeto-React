@@ -12,6 +12,10 @@ const app = function App() {
     setPlayerCards([...playerCards, players]);
   };
 
+  const toDeleteCardPlayer = function (e) {
+    console.log(e);
+  };
+
   return (
     <div className="App">
       <Banner />
@@ -26,6 +30,7 @@ const app = function App() {
           primeColor={teams.primeColor}
           secColor={teams.secColor}
           players={playerCards.filter(players => players.team === teams.name)}
+          toDeleteTeamCard={toDeleteCardPlayer}
         />
       ))}
       <EndPage />

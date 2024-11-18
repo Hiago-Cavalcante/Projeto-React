@@ -1,10 +1,12 @@
 import './cardPlayer.css';
+import { IoCloseCircle } from 'react-icons/io5';
 
 const CardPlayer = props => {
   const alt = `${props.name} image`;
 
   return (
     <div className="Card-Player">
+      <IoCloseCircle className="Delete" onClick={props.teamCardDel} />
       <div
         className="header-Card"
         style={{ backgroundColor: props.backgroundColor }}

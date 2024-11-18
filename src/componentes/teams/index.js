@@ -7,18 +7,22 @@ const Team = props => {
       className="teams-cards"
       style={{ backgroundColor: props.secColor }}
     >
+      <input value={props.secColor} type="color" className="input-color" />
       <h3 style={{ borderColor: props.primeColor }}>{props.Team}</h3>
       <div className="player-cards">
-        {props.players.map(playerCard => (
-          <CardPlayer
-            backgroundColor={props.primeColor}
-            key={playerCard.name}
-            image={playerCard.image}
-            name={playerCard.name}
-            pos={playerCard.pos}
-            hero={playerCard.hero}
-          />
-        ))}
+        {props.players.map(playerCard => {
+          return (
+            <CardPlayer
+              backgroundColor={props.primeColor}
+              key={playerCard.name}
+              image={playerCard.image}
+              name={playerCard.name}
+              pos={playerCard.pos}
+              hero={playerCard.hero}
+              teamCardDel={props.toDeleteTeamCard}
+            />
+          );
+        })}
       </div>
     </section>
   ) : (
