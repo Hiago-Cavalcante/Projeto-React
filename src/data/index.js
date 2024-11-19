@@ -1,40 +1,8 @@
-export const teams = [
-  {
-    name: 'Team Liquid',
-    primeColor: '#82CFFA',
-    secColor: '#E8F8FF',
-  },
-  {
-    name: 'OG',
-    primeColor: '#57C278',
-    secColor: '#d9f7e9',
-  },
-  {
-    name: 'Team Spirit',
-    primeColor: '#3f4d57',
-    secColor: '#b8bcbf',
-  },
-  {
-    name: 'LGD Gaming',
-    primeColor: '#E06B69',
-    secColor: '#FDE7E8',
-  },
-  {
-    name: 'Virtus.pro',
-    primeColor: '#ff8a29',
-    secColor: '#FFEEDF',
-  },
-  {
-    name: 'Fnatic',
-    primeColor: '#ff4500',
-    secColor: '#FFFFFF',
-  },
-  {
-    name: 'Natus Vincere',
-    primeColor: '#ffBA05',
-    secColor: '#FFF5D9',
-  },
-];
+import { useState } from 'react';
+
+
+
+
 export const position = [
   'Hard-Carry',
   'Mid-Lanner',
