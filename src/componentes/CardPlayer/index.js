@@ -6,7 +6,10 @@ const CardPlayer = props => {
 
   return (
     <div className="Card-Player">
-      <IoCloseCircle className="Delete" onClick={props.teamCardDel} />
+      <IoCloseCircle 
+      className="Delete" 
+      onClick={()=>props.teamCardDel(props.id)} 
+      />
       <div
         className="header-Card"
         style={{ backgroundColor: props.backgroundColor }}

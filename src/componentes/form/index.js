@@ -4,6 +4,7 @@ import DropDown from '../dropdown';
 import { heroes, position, teams } from '../../data';
 import BtnCreateCard from '../BtnCreatCard';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = props => {
   const [name, setName] = useState('');
@@ -20,6 +21,7 @@ const Form = props => {
       image,
       hero,
       team,
+      id: uuidv4(),
     });
     setName('');
     setPos('');

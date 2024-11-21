@@ -10,7 +10,7 @@ const Team = props => {
     >
       <input
         value={props.Color}
-        onChange={e => props.changeColor(e.target.value, props.Team)}
+        onChange={(e) => props.changeColor(e.target.value, props.Team)}
         type="color"
         className="input-color"
       />
@@ -20,7 +20,7 @@ const Team = props => {
           return (
             <CardPlayer
               backgroundColor={props.Color}
-              key={playerCard.name}
+              id={playerCard.id}
               image={playerCard.image}
               name={playerCard.name}
               pos={playerCard.pos}
