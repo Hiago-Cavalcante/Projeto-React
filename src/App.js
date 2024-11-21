@@ -64,13 +64,17 @@ const app = function App() {
 
   const toDeleteCardPlayer = function (id) {
     setPlayerCards(playerCards.filter(player => player.id !== id));
-    console.log(id);
+  };
+
+  const createNewTeam = function (newTeam) {
+    setTeams([...teams, { ...newTeam, id: uuidv4() }]);
   };
 
   return (
     <div className="App">
       <Banner />
       <Form
+        CreateNewTeam={createNewTeam}
         teamsNames={teams.map(teams => teams.name)}
         setCardPlayer={players => newPlayerCard(players)}
       />

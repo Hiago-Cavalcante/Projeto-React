@@ -1,18 +1,18 @@
-.text-area {
+.area {
   margin: 24px 0;
 }
 
-.text-area h1 {
+.area h1 {
   text-align: center;
 }
 
-.text-area label {
+.area label {
   display: block;
   margin-bottom: 8px;
-  font-size: 24px;
+  font-size: 23px;
 }
 
-.text-area input {
+.area input {
   background-color: #fff;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
@@ -21,4 +21,10 @@
   padding: 24px;
   box-sizing: border-box;
   border-radius: 10px;
+}
+
+.area-color input {
+  padding: 5px 20px;
+  height: 40px;
+
 }
